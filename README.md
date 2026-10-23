@@ -1,44 +1,90 @@
-<p> <img src="https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg" width="60px" height="auto"></p>
-
 # java-game-character
 
-# 🎮 Data Abstraction in Java (DSA Lesson)
+#  Game Character Manager in Java
 
-## 📌 What is Data Abstraction?
+A simple Java project demonstrating **Data Abstraction, Object-Oriented Programming (OOP), and Stack ADT** using game characters inspired by Gojo Satoru and Ryomen Sukuna.
 
-- **Abstraction** is the process of showing only the essential details and hiding the implementation.
-- In **OOP with Java**, abstraction is usually implemented using **abstract classes** and **interfaces**.
-- It lets us focus on _what_ an object does, not _how_ it does it.
+---
+
+##  What is Data Abstraction?
+
+- **Abstraction** hides implementation details and shows only the essential features.
+- In Java, abstraction can be implemented using **abstract classes** and **interfaces**.
+- It allows us to define what an object does while subclasses provide their own implementations.
 
 ---
 
 ## 🐾 Example: Game Characters with Abstraction
 
-We define an **abstract class** `GameCharacter` that all characters must extend.  
-It forces every character to implement `attack()` and `specialMove()`, but allows unique behaviors too.
+We define an abstract class `GameCharacter` that contains common attributes such as `name`, `health`, and `attackPower`.
+
+Each character implements its own methods:
+
+- `attack()` – Performs an attack.
+- `specialMove()` – Uses a unique special ability.
+- `takeDamage()` – Reduces the character's health.
+
+### Character Classes
+
+- **Gojo** – Uses Infinity.
+- **Sukuna** – Uses Malevolent Shrine.
+- **Warrior** – Uses Shield Bash.
+- **Mage** – Uses magical attacks and Meteor Strike.
 
 ---
 
-## 🕹️ Sample Output
+##  Stack Abstract Data Type (ADT)
 
-```
-Character: Arthas
-Arthas swings a mighty sword!
-Arthas uses Shield Bash!
+The project uses Java's `Stack<GameCharacter>` to store and manage game characters.
 
-Character: Merlin
-Merlin casts a fireball!
-Merlin uses Lightning Storm!
-Merlin unleashes the Secret Power: Utot 💨!!!
+- `push()` – Adds a character to the stack.
+- `peek()` – Gets the character at the top without removing it.
+- `pop()` – Removes the character at the top.
+- `isEmpty()` – Checks whether the stack contains characters.
+
+---
+
+##  Graphical User Interface
+
+The project includes a Java Swing GUI that allows users to interact with the character stack through buttons.
+
+- Add Gojo, Sukuna, Warrior, or Mage.
+- View character names, health, and attack power.
+- Perform actions on the top character.
+- Remove the top character from the stack.
+
+---
+
+##  Sample Output
+
+```text
+Gojo Satoru added!
+
+Gojo Satoru | Health: 100 | Attack: 50
+
+Gojo Satoru attacks!
+Damage: 50
+
+Gojo Satoru removed from the stack!
 ```
 
 ---
 
-## 📝 Summary
+##  Technologies Used
 
-- **Abstraction** = “Define what, hide how.”
-- Abstract classes/interfaces define the **rules**.
-- Subclasses provide the **details**.
-- Our game example makes it clear:
-  - `GameCharacter` = abstract base
-  - `Warrior`, `Mage` = concrete implementations
+- Java
+- Java Swing
+- Object-Oriented Programming (OOP)
+- Stack Abstract Data Type (ADT)
+
+---
+
+##  Summary
+
+- **Abstraction** defines essential behaviors while hiding implementation details.
+- **Inheritance** allows character classes to extend `GameCharacter`.
+- **Polymorphism** allows different character types to implement their own behaviors.
+- **Stack ADT** manages characters using LIFO (Last In, First Out).
+- **Java Swing** provides a graphical interface for interacting with characters.
+
+This project demonstrates basic Java programming concepts through a simple game character management application.
